@@ -45,7 +45,8 @@ graph TD
    - **Extractor Node**: Queries Groq's LLM (`llama-3.3-70b-versatile` or `gemma2-9b-it`) to extract structured data. If a rep says *"met with..."*, *"he met"*, or *"she met"*, it automatically defaults the Date and Time to the current system values.
    - **Validator Node**: Audits critical keys: `hcp_name`, `product`, and `summary`.
    - **Follow-up Node**: Calls the LLM to draft a context-aware question requesting missing details.
-   - **Save Node (with Duplicate Prevention)**: Before writing to the database, the agent runs a lookup query matching `hcp_name`, `product`, and `date`. If a duplicate exists, it skips saving to prevent data redundancy and alerts the rep.
+   - **Save Node**: Point out the success message. It says "Interaction saved successfully".
+   - **Redundancy/Duplicate Prevention: Before writing to the database, the agent runs a lookup query matching `hcp_name`, `product`, and `date`. If a duplicate exists, it skips saving to prevent data redundancy and alerts the rep.
 
 ---
 
