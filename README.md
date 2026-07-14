@@ -46,7 +46,7 @@ graph TD
    - **Validator Node**: Audits critical keys: `hcp_name`, `product`, and `summary`.
    - **Follow-up Node**: Calls the LLM to draft a context-aware question requesting missing details.
    - **Save Node**: Point out the success message. It says "Interaction saved successfully".
-   - **Redundancy/Duplicate Prevention: Before writing to the database, the agent runs a lookup query matching `hcp_name`, `product`, and `date`. If a duplicate exists, it skips saving to prevent data redundancy and alerts the rep.
+   - **Redundancy/Duplicate Prevention**: Before writing to the database, the agent runs a lookup query matching `hcp_name`, `product`, and `date`. If a duplicate exists, it skips saving to prevent data redundancy and alerts the rep.
 
 ---
 
